@@ -9,11 +9,13 @@ import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 // Worker
 import { Worker } from '@react-pdf-viewer/core'; // install this library
 
+
+
 export const App = () => {
 
   // Create new plugin instance
   const defaultLayoutPluginInstance = defaultLayoutPlugin();
-  
+  const chemin = "C:/Users/thoma/Documents/";
   // for onchange event
   const [pdfFile, setPdfFile]=useState(null);
   const [pdfFileError, setPdfFileError]=useState('');
@@ -22,9 +24,13 @@ export const App = () => {
   const [viewPdf, setViewPdf]=useState(null);
 
   // onchange event
+  var selectedFile ;
   const fileType=['application/pdf'];
   const handlePdfFileChange=(e)=>{
     let selectedFile=e.target.files[0];
+  
+
+
     if(selectedFile){
       if(selectedFile&&fileType.includes(selectedFile.type)){
         let reader = new FileReader();
@@ -39,10 +45,12 @@ export const App = () => {
         setPdfFileError('Please select valid pdf file');
       }
     }
+    
     else{
       console.log('select your file');
     }
   }
+  
 
   // form submit
   const handlePdfFileSubmit=(e)=>{
@@ -54,6 +62,7 @@ export const App = () => {
       setViewPdf(null);
     }
   }
+  
 
   return (
     <div className='container'>
@@ -61,7 +70,7 @@ export const App = () => {
     <br></br>
     
       <form className='form-group' onSubmit={handlePdfFileSubmit}>
-        <input type="file" className='form-control'
+        <input type="file" className='form-control' id="input"
           required onChange={handlePdfFileChange}
         />
         {pdfFileError&&<div className='error-msg'>{pdfFileError}</div>}
@@ -82,9 +91,10 @@ export const App = () => {
       {/* if we dont have pdf or viewPdf state is null */}
       {!viewPdf&&<>No pdf file selected</>}
       </div>
-      <a href="/mon-fichier.pdf" download>Cliquez pour télécharger</a>
-
-
+      
+      <a href={chemin} download>Télécharger </a>
+      {/*chemin+selectedFile.name pour le chemin complet mais impossible de lire la variable selected.name*/}
+      
     </div>
   )
 }
