@@ -1,0 +1,82 @@
+
+.container{
+    background-color: #f3f0ec;
+}
+
+.pdf{
+    text-align: center;
+    margin: 50px;
+}
+
+.test{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.arr{
+    font-size: 50px;
+    height: 100px;
+    background-color: #e5322d;
+    margin-top: 50px;
+    border-radius: 10px;
+    width: 700px;
+    
+    
+  }
+  .textUpload{
+      color: white;
+      
+  }
+  .viewPDF{
+    text-align: center;
+    margin-top: 100px;
+
+
+  }
+  .Split{
+    text-align: center;
+    margin: 100px;
+  }
+
+  .buttonTitre1{
+    margin-left: 130px;
+    margin-right: 130px;
+    margin-bottom: 100px;
+          height: 40px;
+      border-radius: 5px;
+      width: 100px;
+      background-color: grey;
+      color: white;
+  }
+
+.buttonTitre2{
+    margin-left: 130px;
+    margin-right: 130px;
+    margin-bottom: 100px;
+
+    
+    height: 40px;
+    border-radius: 5px;
+    width: 100px;
+    background-color: grey;
+    color: white;
+
+    
+}
+
+.buttonTitre3{
+    margin-left: 130px;
+    margin-right: 130px;
+    margin-bottom: 100px;
+
+    height: 40px;
+    border-radius: 5px;
+    width: 100px;
+    background-color: grey;
+    color: white;
+
+}

@@ -8,7 +8,6 @@ import '@react-pdf-viewer/core/lib/styles/index.css';
 import '@react-pdf-viewer/default-layout/lib/styles/index.css';
 // Worker
 import { Worker } from '@react-pdf-viewer/core'; // install this library
-import './App.css';
 
 
 import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
@@ -67,19 +66,15 @@ export const App = () => {
     }
   }
 
- 
-//ocr
+ //C:/Users/thoma/Documents/pdf/pdf.pdf"
+
+
   return (
     
 
     <div className='container'>
 
-    
-
     <br></br>
-    <div className="Selection">
-      <h1 className="pdf"> Selection de PDF</h1>
-    </div>
     
       <form className='form-group' onSubmit={handlePdfFileSubmit}>
         <input type="file" className='form-control' id="input"
@@ -87,19 +82,12 @@ export const App = () => {
         />
         {pdfFileError&&<div className='error-msg'>{pdfFileError}</div>}
         <br></br>
-
-        <div className="test">
-        <button className="arr" type="submit" >
-          <a className="textUpload">Télécharger un fichier PDF </a></button>
-
-        </div>
-
-          
-        
-
+        <button type="submit" className='btn btn-success btn-lg'>
+          UPLOAD
+        </button>
       </form>
       <br></br>
-      <h4 className="viewPDF">View PDF</h4>
+      <h4>View PDF</h4>
       <div className='pdf-container'>
         {/* show pdf conditionally (if we have one)  */}
         {viewPdf&&<><Worker workerUrl="https://unpkg.com/pdfjs-dist@2.6.347/build/pdf.worker.min.js">
@@ -110,20 +98,17 @@ export const App = () => {
       {/* if we dont have pdf or viewPdf state is null */}
       {!viewPdf&&<>No pdf file selected</>}
       </div>
-
-    <h1 className="Split">Quelle partie souhaitez-vous splitter ? </h1>
-
-
-     <button type="submit" className="buttonTitre1 ">
-        partie 1
+      
+      <button type="submit" className="buttonTitre ">
+        titre 1
       </button>
 
-      <button type="submit" className="buttonTitre2 ">
-      partie 2
+      <button type="submit" className="buttonTitre ">
+        titre 2
       </button>
 
-      <button type="submit" className="buttonTitre3 ">
-      partie 3
+      <button type="submit" className="buttonTitre ">
+        titre 2
       </button>
 
       
