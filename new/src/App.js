@@ -73,29 +73,30 @@ export const App = () => {
     
 
     <div className='container'>
+     
 
-    
+       <img className="img" src="https://alexlegal.fr/logo.svg"/> 
 
     <br></br>
     <div className="Selection">
-      <h1 className="pdf"> Selection de PDF</h1>
+     <h1 className="pdf"> Divisez vos PDF en partie distinct </h1>
     </div>
     
+         
       <form className='form-group' onSubmit={handlePdfFileSubmit}>
-        <input type="file" className='form-control' id="input"
-          required onChange={handlePdfFileChange}
-        />
+        
+      <div className="barre"> <input type="file" className='dtb' id="input"
+          required onChange={handlePdfFileChange}>
+          </input> </div>
         {pdfFileError&&<div className='error-msg'>{pdfFileError}</div>}
         <br></br>
+        
 
         <div className="test">
         <button className="arr" type="submit" >
-          <a className="textUpload">Télécharger un fichier PDF </a></button>
+          <p className="textA">Télécharger un fichier PDF </p></button>
 
         </div>
-
-          
-        
 
       </form>
       <br></br>
@@ -111,19 +112,19 @@ export const App = () => {
       {!viewPdf&&<>No pdf file selected</>}
       </div>
 
-    <h1 className="Split">Quelle partie souhaitez-vous splitter ? </h1>
+    <h1 className="Split">Quelle dépot souhaitez-vous consulter ? </h1>
 
 
      <button type="submit" className="buttonTitre1 ">
-        partie 1
+     Depot d'acte 1
       </button>
 
       <button type="submit" className="buttonTitre2 ">
-      partie 2
+      Depot d'acte 2
       </button>
 
       <button type="submit" className="buttonTitre3 ">
-      partie 3
+      Depot d'acte 3
       </button>
 
       

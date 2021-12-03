@@ -3,10 +3,34 @@
     background-color: #f3f0ec;
 }
 
+.img{
+    width:200px;
+}
+
 .pdf{
     text-align: center;
     margin: 50px;
 }
+
+.dtb {
+    background-color: #CCD1D1 ;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: black;
+    align-items: center;
+    width: 500px;
+}
+
+
+.barre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+
 
 .test{
     width: 100%;
@@ -24,11 +48,16 @@
     margin-top: 50px;
     border-radius: 10px;
     width: 700px;
-    
-    
+    transition-duration: 0.4s;
   }
-  .textUpload{
+
+  .arr:hover{
+    background-color: #A1372F; /* Green */
+    color: white;
+}
+  .textA{
       color: white;
+      text-decoration: none;
       
   }
   .viewPDF{
@@ -39,44 +68,53 @@
   }
   .Split{
     text-align: center;
-    margin: 100px;
+    margin: 100px 0px;
   }
 
+
   .buttonTitre1{
-    margin-left: 130px;
-    margin-right: 130px;
-    margin-bottom: 100px;
-          height: 40px;
+      font-size: large;
+      margin:50px 100PX;
+      height: 40px;
       border-radius: 5px;
-      width: 100px;
+      width: 150px;
       background-color: grey;
       color: white;
+      transition-duration: 0.4s;
+
+  }
+  .buttonTitre1:hover{
+    background-color: #FF1200; 
+    color: white;
   }
 
 .buttonTitre2{
-    margin-left: 130px;
-    margin-right: 130px;
-    margin-bottom: 100px;
-
-    
+    margin:50px 100PX;
+    font-size: large;
     height: 40px;
     border-radius: 5px;
-    width: 100px;
+    width: 150px;
     background-color: grey;
     color: white;
-
-    
+    transition-duration: 0.4s;  
+}
+.buttonTitre2:hover{
+    background-color: #00FF1A; 
+    color: white;
 }
 
 .buttonTitre3{
-    margin-left: 130px;
-    margin-right: 130px;
-    margin-bottom: 100px;
-
+    font-size: large;
+    margin:50px 100PX;
     height: 40px;
     border-radius: 5px;
-    width: 100px;
+    width: 150px;
     background-color: grey;
     color: white;
+    transition-duration: 0.4s;
 
+}
+.buttonTitre3:hover{
+    background-color: #0063FF; 
+    color: white;
 }
